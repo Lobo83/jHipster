@@ -34,13 +34,13 @@
 
         <div class="form-group">
             <label data-translate="myJHipsterApp.pokemon.evolucionaA" for="field_evolucionaA">Evoluciona A</label>
-            <select class="form-control" id="field_evolucionaA" name="evolucionaA" ng-model="vm.pokemon.evolucionaAId" ng-options="pokemon.id as pokemon.id for pokemon in vm.evolucionaas | orderBy:'id'">
+            <select class="form-control" id="field_evolucionaA" name="evolucionaA" ng-model="vm.pokemon.evolucionaAId" ng-options="pokemon.id as pokemon.nombre for pokemon in vm.evolucionaas | orderBy:'id'">
                 <option value=""></option>
             </select>
         </div>
         <div class="form-group">
             <label data-translate="myJHipsterApp.pokemon.tipoPokemon" for="field_tipoPokemon">Tipo Pokemon</label>
-            <select class="form-control" id="field_tipoPokemon" multiple name="tipoPokemon" ng-model="vm.pokemon.tipoPokemons" ng-options="tipo as tipo.id for tipo in vm.tipos track by tipo.id"></select>
+            <select class="form-control" id="field_tipoPokemon" multiple name="tipoPokemon" ng-model="vm.pokemon.tipoPokemons" ng-options="tipo as tipo.tipo for tipo in vm.tipos track by tipo.id"></select>
         </div>
     </div>
     <div class="modal-footer">
