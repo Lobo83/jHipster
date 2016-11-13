@@ -1,0 +1,25 @@
+{
+    "myJHipsterApp": {
+        "pokemon" : {
+            "home": {
+                "title": "Pokemons",
+                "createLabel": "Crear nuevo Pokemon",
+                "createOrEditLabel": "Crear o editar Pokemon",
+                "search": "Search for Pokemon"
+            },
+            "created": "Un nuevo Pokemon ha sido creado con el identificador {{ param }}",
+            "updated": "Un Pokemon ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Pokemon ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Pokemon {{ id }}?"
+            },
+            "detail": {
+                "title": "Pokemon"
+            },
+            "nombre": "Nombre",
+            "descripcion": "Descripcion",
+            "evolucionaA": "Evoluciona A",
+            "tipoPokemon": "Tipo Pokemon"
+        }
+    }
+}

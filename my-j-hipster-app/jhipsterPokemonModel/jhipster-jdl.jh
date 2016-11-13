@@ -1,0 +1,41 @@
+/**Tabla de configuracion para clasificacion pokemon*/
+entity Tipo {
+	
+    tipo String required,
+    descripcion String
+}
+
+/**Tabla de pokemon*/
+entity Pokemon {
+	
+    nombre String required,
+    descripcion String
+  
+    
+  }
+
+
+
+
+relationship ManyToMany {
+	Pokemon{tipoPokemon} to Tipo
+}
+
+
+
+// defining multiple oneToOne relationships
+relationship OneToOne {
+	Pokemon{evolucionaA} to Pokemon
+}
+
+// Set pagination options
+paginate Pokemon, Tipo with infinite-scroll
+
+
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl 
+// Set an angular suffix
+angularSuffix * with mySuffix
+

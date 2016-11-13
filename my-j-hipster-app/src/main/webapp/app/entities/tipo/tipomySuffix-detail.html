@@ -1,0 +1,27 @@
+
+<div>
+    <h2><span data-translate="myJHipsterApp.tipo.detail.title">Tipo</span> {{vm.tipo.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="myJHipsterApp.tipo.tipo">Tipo</span></dt>
+        <dd>
+            <span>{{vm.tipo.tipo}}</span>
+        </dd>
+        <dt><span data-translate="myJHipsterApp.tipo.descripcion">Descripcion</span></dt>
+        <dd>
+            <span>{{vm.tipo.descripcion}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="tipomySuffix-detail.edit({id:vm.tipo.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>
