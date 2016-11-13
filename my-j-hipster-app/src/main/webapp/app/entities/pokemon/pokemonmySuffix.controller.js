@@ -22,6 +22,7 @@
 
         loadAll();
 
+
         function loadAll () {
             Pokemon.query({
                 page: vm.page,
@@ -40,7 +41,12 @@
                 vm.links = ParseLinks.parse(headers('link'));
                 vm.totalItems = headers('X-Total-Count');
                 for (var i = 0; i < data.length; i++) {
-                    vm.pokemons.push(data[i]);
+                	vm.pokemon=data[i];
+                	if(null != data[i].evolucionaAId){
+                		vm.pokemon.evolucion=Pokemon.get({id:data[i].evolucionaAId});
+                	}
+                	
+                    vm.pokemons.push(vm.pokemon);
                 }
             }
 
