@@ -12,7 +12,7 @@
 
         vm.pokemon = entity;
         vm.previousState = previousState.name;
-
+        vm.evolucion = Pokemon.get({id:vm.pokemon.evolucionaAId});
         var unsubscribe = $rootScope.$on('myJHipsterApp:pokemonUpdate', function(event, result) {
             vm.pokemon = result;
         });
